@@ -1,0 +1,25 @@
+{
+  "name": "inprovec 1.0",
+  "authors": [
+    "javiier19 <luijaniet@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "./lib",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-material": "^1.0.7",
+    "angular": "1.5.3",
+    "angular-ui-router": "^0.2.18",
+    "angular-resource": "^1.5.3"
+  }
+}

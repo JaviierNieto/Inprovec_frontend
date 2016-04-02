@@ -1,0 +1,15 @@
+.login-form{
+    text-align: center;
+    padding-top: 100px;
+}
+.text-fields {
+    width: 70%;
+    margin-left: 60px;
+    margin-right: 60px;
+}
+
+.form-buttons {
+    width: 70%;
+    margin-left: 60px;
+    margin-right: 60px;
+}
