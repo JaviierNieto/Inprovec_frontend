@@ -1,7 +1,7 @@
-<div class="toolbar">
+<div class="toolbar" ng-controller="AppCtrl">
     <md-toolbar>
         <div class="md-toolbar-tools">
-            <md-button class="md-icon-button" aria-label="Menu">
+            <md-button class="md-icon-button" aria-label="Menu" ng-click="toggleLeft()">
                 <i class="material-icons">menu</i>
             </md-button>
             <h2>
@@ -11,7 +11,7 @@
             <div class="identification" layout="column">
                 <div class="name">Dilson Villalba</div>
                 <span class="role">
-                    <i class="material-icons security">security</i>Admi
+                    <i class="material-icons security">security</i>Admin
                 </span>
             </div>
             <md-menu md-offset="0 -7">
@@ -19,11 +19,22 @@
                     <i class="material-icons">more_vert</i>
                 </md-button>
                 <md-menu-content width="2" md-position-mode="target-right target">
-                    <md-menu-item ng-repeat="item in [1, 2]">
-                        <md-button ng-click="ctrl.announceClick($index)"> <i class="material-icons">close</i> <span md-menu-align-target> Cerrar Sesion</span> {{item}} </md-button>
+                    <md-menu-item>
+                        <md-button> <i class="material-icons">build</i> <span md-menu-align-target> Modificar</span></md-button>
+                    </md-menu-item><md-menu-item>
+                        <md-button> <i class="material-icons">close</i> <span md-menu-align-target> Cerrar Sesion</span></md-button>
                     </md-menu-item>
                 </md-menu-content>
             </md-menu>
         </div>
     </md-toolbar>
+
+    <md-sidenav class="md-sidenav-left md-whiteframe-z2" md-component-id="left">
+        <md-toolbar class="md-theme-light">
+            <h1 class="md-toolbar-tools">Inprovec</h1>
+        </md-toolbar>
+        <md-content ng-controller="LeftCtrl" layout-padding>
+
+        </md-content>
+    </md-sidenav>
 </div>
