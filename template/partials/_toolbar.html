@@ -1,26 +1,26 @@
-<div>
+<div class="toolbar">
     <md-toolbar>
         <div class="md-toolbar-tools">
+            <md-button class="md-icon-button" aria-label="Menu">
+                <i class="material-icons">menu</i>
+            </md-button>
             <h2>
                 <span>Inprovec</span>
             </h2>
             <span flex></span>
-            <md-button>
-                Clientes
-            </md-button>
-            <md-button>
-                vendedores
-            </md-button>
-            <md-button>
-                ventas
-            </md-button>
+            <div class="identification" layout="column">
+                <div class="name">Dilson Villalba</div>
+                <span class="role">
+                    <i class="material-icons security">security</i>Admi
+                </span>
+            </div>
             <md-menu md-offset="0 -7">
                 <md-button aria-label="Open demo menu" class="md-icon-button" ng-click="$mdOpenMenu($event)">
                     <i class="material-icons">more_vert</i>
                 </md-button>
                 <md-menu-content width="2" md-position-mode="target-right target">
-                    <md-menu-item ng-repeat="item in [1, 2, 3]">
-                        <md-button ng-click="ctrl.announceClick($index)"> <span md-menu-align-target>Option</span> {{item}} </md-button>
+                    <md-menu-item ng-repeat="item in [1, 2]">
+                        <md-button ng-click="ctrl.announceClick($index)"> <i class="material-icons">close</i> <span md-menu-align-target> Cerrar Sesion</span> {{item}} </md-button>
                     </md-menu-item>
                 </md-menu-content>
             </md-menu>

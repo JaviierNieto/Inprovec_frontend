@@ -13,3 +13,19 @@
     margin-left: 60px;
     margin-right: 60px;
 }
+.toolbar .identification {
+    margin-right: 40px;
+    text-align: right;
+}
+
+.toolbar .identification .name {
+    font-size: 14px;
+    margin-right: 3px;
+}
+
+.toolbar .identification .role {
+    font-size: 11px;
+}
+.toolbar .identification .role .security {
+    font-size: 17px;
+}
