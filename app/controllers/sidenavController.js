@@ -1,6 +1,6 @@
 var app = angular.module('inprovec');
 
-app.controller('AppCtrl', function ($scope, $timeout, $mdSidenav, $log) {
+app.controller('sidenavCtrl', function ($scope, $timeout, $mdSidenav, $log) {
     $scope.toggleLeft = buildDelayedToggler('left');
     $scope.isOpenRight = function(){
         return $mdSidenav('right').isOpen();
@@ -35,11 +35,18 @@ app.controller('AppCtrl', function ($scope, $timeout, $mdSidenav, $log) {
         }, 200);
     }
 })
-    .controller('LeftCtrl', function ($scope, $timeout, $mdSidenav, $log) {
-        $scope.close = function () {
-            $mdSidenav('left').close()
-                .then(function () {
-                    $log.debug("close LEFT is done");
-                });
+    .controller('LeftCtrl', function ($scope, $timeout, $mdSidenav, $log, MenuService) {
+        $scope.views = MenuService.getViews();
+        $scope.currentView = MenuService.getCurrent();
+
+        $scope.toggleMainMenu = function() {
+            $mdSidenav('left').toggle();
         };
+
+        $scope.changeView = function(view) {
+            MenuService.setCurrent(view);
+            $scope.currentView = view;
+            $scope.toggleMainMenu();
+        }
+
     });

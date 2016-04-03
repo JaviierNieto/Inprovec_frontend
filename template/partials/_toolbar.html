@@ -1,4 +1,4 @@
-<div class="toolbar" ng-controller="AppCtrl">
+<div class="toolbar" ng-controller="sidenavCtrl">
     <md-toolbar>
         <div class="md-toolbar-tools">
             <md-button class="md-icon-button" aria-label="Menu" ng-click="toggleLeft()">
@@ -26,6 +26,7 @@
                     </md-menu-item>
                 </md-menu-content>
             </md-menu>
+
         </div>
     </md-toolbar>
 
@@ -33,8 +34,11 @@
         <md-toolbar class="md-theme-light">
             <h1 class="md-toolbar-tools">Inprovec</h1>
         </md-toolbar>
-        <md-content ng-controller="LeftCtrl" layout-padding>
-
+        <md-content ng-controller="LeftCtrl" layout-padding class="side-menu">
+            <div class="menu-item" layout="row" layout-align="start center" ng-repeat="view in views" ng-class="{'separator': view.separator, 'selected': currentView === view.label}" ng-click="changeView(view.label)">
+                <i class="fa material-icons icon-all-requests">{{view.icon}}</i>
+                <span> {{view.label}}</span>
+            </div>
         </md-content>
     </md-sidenav>
 </div>
